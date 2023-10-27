@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "ShowBook";
+}
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Book Name</th>
+            <th scope="col"> Author Name</th>
+            <th scope="col"> Publisher</th>
+            <th scope="col"> Price</th>
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booklist in Model)
+        {
+            <tr class="table-dark">
+                <th scope="row"></th>
+                <td>@booklist.BookName</td>
+                <td>@booklist.AuthorName</td>
+                <td>@booklist.Publisher</td>
+                <td>@booklist.Price</td>
+
+                
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+
+
+<a asp-controller="Home" asp-action="AddBook" class="btn btn-info">Back</a>
+<Partial name="_Notification" />
+

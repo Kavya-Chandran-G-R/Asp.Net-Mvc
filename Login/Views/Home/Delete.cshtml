@@ -1,0 +1,57 @@
+﻿@model Register;
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form method="post" asp-controller="Home" asp-action="Delete">
+    <fieldset>
+
+        <div class="form-group">
+            <label asp-for="Name" class="form-label mt-4"></label>
+            <input asp-for="Name" class="form-control">
+            <span class="text-danger" asp-validation-for="Name"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Age" class="form-label mt-4"></label>
+            <input asp-for="Age" class="form-control">
+            <span class="text-danger" asp-validation-for="Age"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Address" class="form-label mt-4"></label>
+            <input asp-for="Address" class="form-control">
+            <span class="text-danger" asp-validation-for="Address"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Course" class="form-label mt-4"></label>
+            <input asp-for="Course" class="form-control">
+            <span class="text-danger" asp-validation-for="Course"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="form-label mt-4"></label>
+            <input asp-for="Email" class="form-control">
+            <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="form-label mt-4"></label>
+            <input asp-for="Password" class="form-control" type="password">
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="form-label mt-4"></label>
+            <input asp-for="PhoneNumber" class="form-control">
+            <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+        </div>
+        <div class=" pt-4">
+            <button type="submit" class="btn btn-info">Delete</button>
+            <a asp-controller="Home" asp-action="LoginPage" class="btn btn-info">Back</a>
+        </div>
+        <input type="hidden" asp-for="Id" />
+
+    </fieldset>
+</form>
+
